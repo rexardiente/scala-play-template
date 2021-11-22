@@ -1,2 +1,2 @@
-# scala-play-template
-Scala Play framework Template
+# Scala Play framework Template
+
