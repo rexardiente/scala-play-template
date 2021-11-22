@@ -14,3 +14,10 @@ server.pid
 *.eml
 /dist/
 .cache
+/.bsp
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
