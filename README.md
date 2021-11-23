@@ -18,18 +18,41 @@ Check out the bootstrapping tools reference in [Play Framework Official Site](ht
 - SHA-256 password encryption
 - Web socket client with play MessageFlowTransformer
 
-#### Required Installations
+### Table of Contents
 
-- Java version >= 15.0.1
-- Scala version >= 2.13.6
-- SBT version 1.5.2
+- [Getting Started](###Getting-started)
+- [Configure PostgreSQL Database](###Configure-PostgreSQL-Database)
+- [Configure Play Slick with tminglei](###Configure-Play-Slick-with-tminglei)
+- [Configure Play Evolution](###Configure-Play-Evolution)
+- [Run Application](###Run-Application)
+- [Running a production server in place](###Running-a-production-server-in-place)
+- [Running a test instance](###Running-a-test-instance)
+- [Automated Testing](###Automated-Testing)
+- [License](###License)
+
+### Prerequisites
+___
+A Play application only needs to include the Play JAR files to run properly. These JAR files are published to the Maven Repository, therefore you can use any Java or Scala build tool to build a Play project. However, Play provides an enhanced development experience (support for routes, templates compilation and auto-reloading) when using the sbt.
+
+This project requires:
+
+- Java SE 1.8 or higher
+- sbt - we recommend the latest version
 - PostgreSQL
 
-#### Project Dependencies
+#### Current Project Dependencies
 - Play version 2.8.x
+- Scala version >= 2.13.6
+- sbt version 1.5.2
 
-#### Setup PostgreSQL Database
+### Getting started
+___
+Clone the repository
 
+    git clone https://github.com/rexardiente/scala-play-template.git
+
+### Configure PostgreSQL Database
+___
 Setup PostgreSQL on macOS, keep in mind that yours might be different from this example.
 
 Open terminal/command line and follow the process:
@@ -49,8 +72,8 @@ Sig in PSQL and update newly created user and give permissions
     // Granting user privileges on database
     Grant all privileges on database "db-user" to "db-name";
 
-#### Play Slick with tminglei
-
+### Configure Play Slick with tminglei
+___
 import the following libraries into `build.sbt`, in this template we are going to use `play-slick`, `play-slick-evolutions` and `slick-pg`.
 
     "com.typesafe.slick" %% "slick" % "3.3.3",
@@ -72,7 +95,8 @@ add this line of code into `application.conf`
           default.db.keepAliveConnection=true
     }
 
-#### Play Evolution
+### Configure Play Evolution
+___
 Create `PostgresDriver.scala` into package `models.utils`, example is in the source code
 
 __Evolutions scripts__
@@ -96,26 +120,47 @@ Copy the all the content inside `schema.sql` into `1.sql` filem, and reload the 
 
 ___Note:__ Evolutions are automatically activated if a database is configured in `application.conf` and evolution scripts are present. You can disable them by setting `play.evolutions.enabled=false`._
 
-#### Run Application
+### Run Application
+___
+Enter `sbt run` to download dependencies and start the system.
+In a browser, enter http://localhost:9000 to view the welcome page.
+
     sbt run
 
-#### Running a production server in place
+### Running a production server in place
+___
 In some circumstances, you may not want to create a full distribution, you may in fact want to run your application from your project’s source directory. This requires an sbt installation on the server, and can be done using the stage task.
 
     sbt clean stage
 
 ### Running a test instance
+___
 Play provides a convenient utility for running a test application in prod mode.
 
 `Note:` This is not intended for production usage.
 
 To run an application in prod mode, run runProd:
 
-    [scala-play-template] $ runProd
+    sbt runProd
 
 ### Automated Testing
+___
+The location for tests is in the “test” folder.
 
-    [scala-play-template] $ test
+You can run tests from the Play console.
+
+To run all tests, run test.
+
+To run only one test class, run test-only followed by the name of the class, i.e., test-only my.namespace.MySpec.
+
+To run only the tests that have failed, run test-quick.
+
+To run tests continually, run a command with a tilde in front, i.e. ~test-quick.
+
+To access test helpers such as FakeRequest in console, run test:console.x
+
+    sbt test
 
 ### License
-Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the [MIT](https://github.com/rexardiente/scala-play-template/blob/main/LICENSE) License.
+___
+Copyright (c) Rex Ardiente. All rights reserved. Licensed under the [MIT](https://github.com/rexardiente/scala-play-template/blob/main/LICENSE) License.
