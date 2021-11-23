@@ -1,4 +1,4 @@
-package utils
+package models.utils
 
 import java.time.Instant
 import play.api.mvc.{ PathBindable, QueryStringBindable }
