@@ -20,14 +20,14 @@ Check out the bootstrapping tools reference in [Play Framework Official Site](ht
 
 ### Table of Contents
 
-- [Getting Started](###Getting-started)
-- [Configure PostgreSQL Database](###Configure-PostgreSQL-Database)
-- [Configure Play Slick with tminglei](###Configure-Play-Slick-with-tminglei)
-- [Configure Play Evolution](###Configure-Play-Evolution)
-- [Run Application](###Run-Application)
-- [Running a production server in place](###Running-a-production-server-in-place)
-- [Running a test instance](###Running-a-test-instance)
-- [Automated Testing](###Automated-Testing)
+- [Getting Started](###Getting%20started)
+- [Configure PostgreSQL Database](###Configure%20PostgreSQL%20Database)
+- [Configure Play Slick with tminglei](###Configure%20Play%20Slick%20with%20tminglei)
+- [Configure Play Evolution](###Configure%20Play%20Evolution)
+- [Run Application](###Run%20Application)
+- [Running a production server in place](###Running%20a%20production%20server%20in%20place)
+- [Running a test instance](###Running%20a%20test%20instance)
+- [Automated Testing](###Automated%20Testing)
 - [License](###License)
 
 ### Prerequisites
