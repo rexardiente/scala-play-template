@@ -3,20 +3,14 @@
 Scala play framework boiler template similar to a Maven archetype. This gives you the advantage using Model-View-Controller (MVC) architectural pattern that separates an application into three main logical components: the model, the view, and the controller.
 
 ---
-#### This project includes the ff.
-
-- Scala class/object with implicit JSON read and write
+#### What you get in this template?
+- Scala object with implicit JSON read and write
 - Data access object (DAO) with DatabaseConfigProvider
-- CRUD API
-- Form Validations
-- Secure Action
+- Sample CRUD API
+- POST api with form validations
+- Simple Secure Action
 - SHA-256 password encryption
 - Web socket client with play MessageFlowTransformer
-
-#### TODO
-
-- Play with React frontend
-- Play to Docker container
 
 #### Required Dependencies
 
@@ -27,19 +21,20 @@ Scala play framework boiler template similar to a Maven archetype. This gives yo
 - PostgreSQL
 
 #### Setup PostgreSQL Database
+
 Setup PostgreSQL on macOS, keep in mind that yours might be different from this example.
 
-Open terminal/command line then type the ff.
+Open terminal/command line and follow the process:
 
-__Create new User__
+Create new user
 
     createuser db-user
 
-__Create database name__
+Create database name
 
     createdb db-name
 
-__Update newly created PSQL user and give permissions__
+Sig in PSQL and update newly created user and give permissions
 
     // Giving the user a password
     Alter user "db-name" with encrypted password 'db-password;
