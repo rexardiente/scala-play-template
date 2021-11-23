@@ -21,6 +21,7 @@ Scala play framework boiler template similar to a Maven archetype. This gives yo
 #### Required Dependencies
 
 - Play version 2.8.x
+- Java version >= 15.0.1
 - Scala version >= 2.13.6
 - sbt-plugin >= 2.8.8
 - PostgreSQL
