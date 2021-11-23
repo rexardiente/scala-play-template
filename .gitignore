@@ -20,4 +20,5 @@ server.pid
 /.classpath
 /.project
 /.settings
+/.DS_Store
 /RUNNING_PID
