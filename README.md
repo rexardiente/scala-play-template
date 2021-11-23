@@ -1,6 +1,12 @@
 # Scala Play framework 2.8.x Template
 
-Scala play framework boiler template similar to a Maven archetype. This gives you the advantage using Model-View-Controller (MVC) architectural pattern that separates an application into three main logical components: the model, the view, and the controller.
+This boiler template similar to a Maven archetype. This gives you the advantage using Model-View-Controller (MVC) architectural pattern that separates an application into three main logical components: the model, the view, and the controller.
+
+The main purpose of this repository is to show a working Scala Play Framework, Database connection and workflow for setting up Play framework for development.
+
+Check out the bootstrapping tools reference in [Play Framework Official Site](https://www.playframework.com/getting-started)
+
+<img src="https://user-images.githubusercontent.com/10578315/143105110-5d664cf3-12f3-4bc2-b093-f1ea810a4b46.png" width="100%"/>
 
 ---
 #### What you get in this template?
@@ -12,13 +18,15 @@ Scala play framework boiler template similar to a Maven archetype. This gives yo
 - SHA-256 password encryption
 - Web socket client with play MessageFlowTransformer
 
-#### Required Dependencies
+#### Required Installations
 
-- Play version 2.8.x
 - Java version >= 15.0.1
 - Scala version >= 2.13.6
-- sbt-plugin >= 2.8.8
+- SBT version 1.5.2
 - PostgreSQL
+
+#### Project Dependencies
+- Play version 2.8.x
 
 #### Setup PostgreSQL Database
 
@@ -96,7 +104,7 @@ In some circumstances, you may not want to create a full distribution, you may i
 
     sbt clean stage
 
-#### Running a test instance
+### Running a test instance
 Play provides a convenient utility for running a test application in prod mode.
 
 `Note:` This is not intended for production usage.
@@ -105,9 +113,9 @@ To run an application in prod mode, run runProd:
 
     [scala-play-template] $ runProd
 
-#### Automated Testing
+### Automated Testing
 
     [scala-play-template] $ test
 
----
-For more information about Play Framework visit [official documentations.](https://www.playframework.com/documentation/2.8.x/Deploying)
+### License
+Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the [MIT](https://github.com/rexardiente/scala-play-template/blob/main/LICENSE) License.
