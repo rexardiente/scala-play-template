@@ -1,4 +1,4 @@
-package models.utils
+package utils
 
 import com.github.tminglei.slickpg._
 import play.api.libs.json.{ JsValue, Json }

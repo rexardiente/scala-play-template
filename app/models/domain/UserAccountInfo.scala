@@ -2,7 +2,8 @@ package models.domain
 
 import java.util.UUID
 import java.time.Instant
-import models.utils.{ CommonImplicits, RegexPatterns }
+import play.api.libs.json.{ Json, JsValue }
+import utils.{ CommonImplicits, RegexPatterns }
 
 object UserAccountInfo extends CommonImplicits {
 	val tupled = (apply: (UUID, String, String, String, Instant) => UserAccountInfo).tupled
@@ -15,4 +16,5 @@ object UserAccountInfo extends CommonImplicits {
 
 case class UserAccountInfo(id: UUID, username: String, password: String, email: String, createdAt: Instant) {
 	require(RegexPatterns.email.pattern.matcher(email).matches(), "invalid email address")
+	def toJson(): JsValue = Json.toJson(this)
 }

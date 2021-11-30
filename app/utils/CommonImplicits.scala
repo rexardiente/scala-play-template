@@ -1,4 +1,4 @@
-package models.utils
+package utils
 
 import java.time.Instant
 import java.util.UUID
@@ -29,11 +29,10 @@ trait CommonImplicits {
 	}
 	implicit val implicitUserAccountInfoWrites = new Writes[UserAccountInfo] {
 	  def writes(v: UserAccountInfo): JsValue = Json.obj(
-		"id" -> v.id,
-		"username" -> v.username,
-		"password" -> v.password,
-		"email" -> v.email,
-		"created_at" -> v.createdAt)
+			"id" -> v.id,
+			"username" -> v.username,
+			"email" -> v.email,
+			"created_at" -> v.createdAt)
 	}
 
 }

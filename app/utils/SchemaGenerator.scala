@@ -1,4 +1,4 @@
-package models.utils
+package utils
 
 import javax.inject.{ Inject, Singleton }
 import play.api.db.slick.{ DatabaseConfigProvider, HasDatabaseConfigProvider }

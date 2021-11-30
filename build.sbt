@@ -17,6 +17,6 @@ libraryDependencies ++= Seq(
 )
 // Adds additional packages into conf/routes
 play.sbt.routes.RoutesKeys.routesImport ++= Seq(
-	"models.utils.Binders._",
+	"utils.Binders._",
 	"java.util.UUID"
 )

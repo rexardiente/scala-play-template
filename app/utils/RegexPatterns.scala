@@ -1,4 +1,4 @@
-package models.utils
+package utils
 
 import scala.util.matching.Regex
 

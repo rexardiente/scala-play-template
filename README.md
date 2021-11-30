@@ -97,7 +97,6 @@ add this line of code into `application.conf`
 
 ### Configure Play Evolution
 ___
-Create `PostgresDriver.scala` into package `models.utils`, example is in the source code
 
 __Evolutions scripts__
 
@@ -122,16 +121,18 @@ ___Note:__ Evolutions are automatically activated if a database is configured in
 
 ### Run Application
 ___
+___Note:__ -Duser.timezone=GMT command extension will enable application on running in UTC/GMT timezone._
 Enter `sbt run` to download dependencies and start the system.
 In a browser, enter http://localhost:9000 to view the welcome page.
 
-    sbt run
+    sbt run -Duser.timezone=GMT
 
 ### Running a production server in place
 ___
 In some circumstances, you may not want to create a full distribution, you may in fact want to run your application from your project’s source directory. This requires an sbt installation on the server, and can be done using the stage task.
 
     sbt clean stage
+    target/universal/stage/bin/scala-play-template -Duser.timezone=GMT
 
 ### Running a test instance
 ___
@@ -141,7 +142,7 @@ Play provides a convenient utility for running a test application in prod mode.
 
 To run an application in prod mode, run runProd:
 
-    sbt runProd
+    sbt runProd -Duser.timezone=GMT
 
 ### Automated Testing
 ___
